@@ -1,14 +1,15 @@
 :root {
   /* Colors */
-  --salmon-: #eaac7f;
+  --salmon: #eaac7f;
   --salmon-light: #f6c799;
   --brown-light: #ba9074;
   --brown-dark: #774b40;
-  --my-black: #331a12;
+  --my-black: #29150e;
   --my-red: #e74e34;
   --green-dark: #13473c;
   --green-dark-brilliant: hsl(167.3, 57.8%, 20%);
   --green-light: #8bd4be;
+  --my-white: #f8f8ff;
 
   /* Fonts */
   --title-font: "Belleza", sans-serif;
@@ -25,6 +26,10 @@ html {
 body {
   font-family: var(--content-font);
   font-size: 1.6rem;
+  background-color: var(--my-white);
+  width: 80%;
+  margin: auto;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1 {
@@ -35,13 +40,14 @@ h1 {
 h4 {
   font-family: var(--title-font);
   font-size: 2.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: var(--green-dark);
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  transition: all 0.3s ease;
 }
 
 /* *********** Nav bar *********** */
@@ -49,6 +55,8 @@ a {
 .top-nav {
   background-color: var(--green-dark);
   color: var(--green-light);
+  width: 80%;
+  margin: auto;
 }
 
 .top-nav-container {
@@ -85,26 +93,35 @@ a {
   align-items: center;
 }
 
+.logo:hover {
+  color: var(--green-light);
+}
+
 .nav-item {
   width: 15rem;
   text-align: center;
+  border: 1px solid var(--green-dark);
+  transition: all 0.2s ease;
 }
 
-nav a:hover {
-  color: var(--salmon-light);
+.nav-item a:hover {
+  color: var(--green-dark);
 }
 
 .nav-item:hover {
-  background-color: var(--green-dark-brilliant) !important;
+  background-color: var(--green-light) !important;
+  border-radius: 2px;
 }
 
 /* *********** Intro Header *********** */
 
 .intro-header {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
   text-align: center;
-  height: 40vh;
+  height: 50vh;
+  background-color: var(--my-white);
+  border: 2px solid var(--salmon-light);
 }
 
 .intro-header img {
@@ -125,52 +142,227 @@ nav a:hover {
   text-transform: uppercase;
 }
 
-/* *********** What I Do *********** */
+/* *********** Main section common tags *********** */
 
-.what-i-do {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 50vh;
-}
-
-.wid-title {
+.sec-left {
+  display: block;
   position: relative;
-  background-color: var(--salmon-light);
-  height: 100%;
-  width: 15%;
-  text-align: center;
+  border-left: 15rem solid var(--salmon-light);
 }
 
-.wid-title h3 {
-  position: absolute;
-  transform: rotate(-90deg);
+.sec-left h3 {
   font-size: 4rem;
-  width: 50rem;
-  top: 10rem;
-  left: -20rem;
   font-family: var(--subtitle-font);
   text-transform: uppercase;
   color: var(--my-black);
+  padding: 5px 10px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background: none;
+
+  transform-origin: 0 0;
+  transform: rotate(90deg);
 }
 
+.sec-right {
+  display: block;
+  position: relative;
+  border-right: 15rem solid var(--salmon-light);
+}
+
+.sec-right h3 {
+  font-size: 4rem;
+  font-family: var(--subtitle-font);
+  text-transform: uppercase;
+  color: var(--my-black);
+  padding: 5px 10px;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  background: none;
+
+  transform-origin: top right;
+  transform: rotate(-90deg);
+}
+
+/* *********** What I Do *********** */
+
 .wid-content {
-  width: 85%;
+  height: 50vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: var(--my-white);
   padding: 2rem;
-  border: 1px solid var(--salmon-light);
-  height: 50vh;
+  border: 2px solid var(--salmon-light);
 }
 
 .wid-card {
   padding: 2rem;
 }
 
+/* *********** Portfolio *********** */
+
+.portfolio-content {
+  border: 2px solid var(--salmon-light);
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  background-color: var(--my-white);
+  padding: 3rem 9rem;
+}
+
+.project img {
+  margin-left: 4rem;
+  width: 15rem;
+  height: 11rem;
+  border-radius: 0.5rem;
+}
+
+.project-text i {
+  font-size: 2rem;
+}
+
+.project-text a {
+  color: var(--green-dark);
+}
+
+.project-text a:hover {
+  color: var(--green-light);
+}
+
+/* *********** About Me *********** */
+
+.abme-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--my-white);
+  border: 2px solid var(--salmon-light);
+}
+
+.abme-img {
+  width: 35%;
+  padding: 3rem 3rem 3rem 6rem;
+}
+
+.abme-img img {
+  width: 25rem;
+  height: 25rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.abme-text {
+  width: 65%;
+  padding: 3rem 5rem 3rem 3rem;
+}
+
+/* *********** Contact *********** */
+
+.contact-content {
+  padding: 6rem 15rem;
+  background-color: var(--my-white);
+  border: 2px solid var(--salmon-light);
+}
+
+.form-input {
+  font-family: var(--subtitle-font);
+  display: block;
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 0.375rem 0.75rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--my-black);
+  background-color: var(--my-white);
+
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: solid;
+  border-bottom-color: var(--green-dark);
+  outline: none;
+}
+
+.form-btn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--green-light);
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: var(--green-dark);
+  border: 1px solid transparent;
+  padding: 0.375rem 2rem;
+  font-size: 1.6rem;
+  border-radius: 0.25rem;
+  /* transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; */
+}
+
+.form-btn {
+  transition: all 0.5s ease;
+}
+
+.form-btn:hover {
+  background-color: var(--green-light);
+  color: var(--green-dark);
+}
+/* *********** Contact *********** */
+
+footer {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  background-color: var(--green-dark);
+  font-family: var(--title-font);
+  font-size: 1.6rem;
+  color: #8bd4be;
+  padding: 3rem 0;
+}
+
+footer i {
+  font-size: 2rem;
+}
+
+.sm-icons {
+  text-align: center;
+  letter-spacing: 1rem;
+}
+
 /* *********** Media Queries *********** */
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1250px) {
+  body {
+    width: 100%;
+  }
+
+  .top-nav {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  p {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 3.5rem;
+  }
+
   .top-nav-container {
     align-items: flex-start !important;
   }
@@ -182,27 +374,51 @@ nav a:hover {
 
   .intro-header {
     height: auto;
+    border: none;
   }
 
-  .what-i-do {
+  .sec-left {
     display: block;
-    margin-top: 20px;
+    margin-top: 0;
     height: auto;
-  }
 
-  .wid-title {
     position: static;
     background-color: var(--salmon-light);
     text-align: center;
     width: 100%;
-    height: auto;
+
+    border: none;
   }
 
-  .wid-title h3 {
-    position: static;
-    transform: rotate(0deg);
+  .sec-left h3 {
+    background-color: var(--salmon-light);
     font-size: 4rem;
     width: 100%;
+    position: static;
+    transform: rotate(0deg);
+  }
+
+  .sec-right {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 0;
+    height: auto;
+
+    position: static;
+    background-color: var(--salmon-light);
+    text-align: center;
+    width: 100%;
+
+    border: none;
+  }
+
+  .sec-right h3 {
+    background-color: var(--salmon-light);
+    font-size: 4rem;
+    width: 100%;
+    position: static;
+    transform: rotate(0deg);
   }
 
   .wid-content {
@@ -219,11 +435,53 @@ nav a:hover {
     width: 100%;
   }
 
-  .wid-card p {
-    font-size: 2rem;
+  .portfolio-content {
+    border: none;
   }
 
-  h4 {
-    font-size: 3.5rem;
+  .project {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    background-color: var(--my-white);
+    padding: 2rem;
+  }
+
+  .project img {
+    margin-left: 0;
+    margin-bottom: 2rem;
+    width: 15rem;
+    height: 11rem;
+    border-radius: 0.5rem;
+  }
+
+  .abme-content {
+    display: block;
+    background-color: var(--my-white);
+    border: none;
+  }
+
+  .abme-img {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .abme-img img {
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .abme-text {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .contact-content {
+    width: 100%;
+    padding: 6rem 2rem;
+    background-color: var(--my-white);
+    border: none;
   }
 }

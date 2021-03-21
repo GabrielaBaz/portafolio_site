@@ -29,10 +29,10 @@
   <body>
     <!-- Top nav -->
     <section class="top-nav">
-      <nav class="navbar navbar-expand-lg top-nav sticky-top p-0">
+      <nav class="navbar navbar-expand-lg top-nav fixed-top p-0">
         <div class="top-nav-container container-fluid">
           <div class="logo">
-            <h1><a href="#">Gabriela Bazan</a></h1>
+            <h1><a class="logo" href="#">Gabriela Bazán</a></h1>
           </div>
           <div class="menu">
             <button
@@ -54,9 +54,6 @@
                   <a class="nav-link" href="#">Intro</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">What I Do</a>
-                </li>
-                <li class="nav-item">
                   <a class="nav-link" href="#">Portfolio</a>
                 </li>
                 <li class="nav-item">
@@ -74,16 +71,14 @@
 
     <section class="intro-header">
       <img src="public/images/Noname-TropicalLeafLogo.png" alt="" />
-      <h1>Gabriela Bazan</h1>
+      <h1>Gabriela Bazán</h1>
       <h2>web and data</h2>
     </section>
 
-    <section class="what-i-do">
-      <div class="wid-title">
-        <h3>what i do</h3>
-      </div>
+    <section class="sec-left what-i-do">
+      <h3>what i do</h3>
       <div class="wid-content">
-        <div class="wid-card wd">
+        <div class="wid-card">
           <img src="public/images/LogoWebChevrons.png" alt="webchevronsicon" />
           <h4>Web Development</h4>
           <p>
@@ -125,6 +120,134 @@
         </div>
       </div>
     </section>
+
+    <section class="sec-right portfolio">
+      <div class="portfolio-content">
+        <div class="project">
+          <div class="project-text">
+            <h4><a href="">Rent-A-Car Login Page</a></h4>
+            <a href=""><i class="fab fa-github-alt"></i></a>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+              aliquam tenetur, impedit provident error dignissimos similique
+              quibusdam nihil rerum vel consequuntur dicta in inventore minus
+              est. Cum itaque ipsum impedit.
+            </p>
+          </div>
+          <div class="project-img"></div>
+          <img src="public/images/project_cardeal.png" alt="carproject" />
+        </div>
+
+        <div class="project">
+          <div class="project-text">
+            <h4>
+              <a
+                href="https://public.tableau.com/profile/gabriela.bazan#!/vizhome/InProgress_15886079135810/Dashboard1"
+                target="_blank"
+                >Top Baby Names France - 1900-2018</a
+              >
+            </h4>
+            <a
+              href="https://github.com/GabrielaBaz/Baby-Names---France"
+              target="_blank"
+              ><i class="fab fa-github-alt"></i
+            ></a>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+              aliquam tenetur, impedit provident error dignissimos similique
+              quibusdam nihil rerum vel consequuntur dicta in inventore minus
+              est. Cum itaque ipsum impedit.
+            </p>
+          </div>
+          <div class="project-img"></div>
+          <img src="public/images/project_baby_names.png" alt="babiesproject" />
+        </div>
+
+        <div class="project">
+          <div class="project-text">
+            <h4><a href="">RWD Example</a></h4>
+            <a href=""><i class="fab fa-github-alt"></i></a>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+              aliquam tenetur, impedit provident error dignissimos similique
+              quibusdam nihil rerum vel consequuntur dicta in inventore minus
+              est. Cum itaque ipsum impedit.
+            </p>
+          </div>
+          <div class="project-img"></div>
+          <img src="public/images/project_ww.png" alt="responsiveproject" />
+        </div>
+      </div>
+      <h3>portfolio</h3>
+    </section>
+
+    <section class="sec-left about-me">
+      <h3>about me</h3>
+
+      <div class="abme-content">
+        <div class="abme-img">
+          <img src="public/images/about_me.jpg" alt="aboutmephoto" />
+        </div>
+
+        <div class="abme-text">
+          <h4>About Me</h4>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa ab
+            iusto, itaque ipsa accusamus similique repellendus iste modi aut
+            aperiam autem nihil sint ullam commodi ex, dignissimos optio soluta
+            impedit!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec-right contact">
+      <div class="contact-content">
+        <form action="" method="post">
+          <!-- <label for="name">Name:</label> -->
+          <input
+            placeholder="Your Name"
+            class="form-input"
+            type="text"
+            id="name"
+            name="name"
+          />
+
+          <!-- <label for="email">e-mail:</label> -->
+          <input
+            placeholder="Your e-mail"
+            class="form-input"
+            type="email"
+            id="email"
+            name="email"
+          />
+
+          <!-- <label for="text-msg">Message:</label> -->
+          <textarea
+            placeholder="Your message"
+            class="form-input"
+            name="text-msg"
+            id="text-msg"
+            cols="30"
+            rows="5"
+          ></textarea>
+
+          <button class="form-btn" type="">Send</button>
+        </form>
+      </div>
+      <h3>contact</h3>
+    </section>
+
+    <footer>
+      <div class="copyright">
+        <p>Copyright &copy; Gabriela Bazan 2021</p>
+      </div>
+      <div class="sm-icons">
+        <i class="fab fa-github-alt"></i>
+        <i class="fab fa-linkedin-in"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
